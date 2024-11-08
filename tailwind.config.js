@@ -25,6 +25,12 @@ export default {
       animation: {
         typing: "typing 2s steps(20) infinite alternate, blink .7s infinite",
       },
+      colors: {
+        darkTeal: "#2E4F4F",
+        deepCyan: "#0E8388",
+        lightMint: "#CBE4DE",
+        darkSlateGreen: "#2C3333",
+      },
     },
   },
   plugins: [],

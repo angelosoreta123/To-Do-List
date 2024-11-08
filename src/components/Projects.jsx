@@ -2,20 +2,21 @@ import { projectList } from "../utilities/projectList";
 
 const Projects = () => {
   return (
-    <section className="text-white max-w-7xl mx-auto px-4 mt-14 lg:mt-24">
-      <h1 className="text-3xl font-bold mb-6 lg:mb-10 lg:text-5xl text-center">
-        Projects
-      </h1>
-      <div className="flex flex-row flex-wrap gap-6 justify-evenly">
+    <section
+      id="projects-section"
+      className=" text-darkSlateGreen max-w-7xl mx-auto px-4 pt-10 h-auto md:min-h-[100dvh]  flex flex-col gap-4 justify-center"
+    >
+      <h1 className="text-3xl text-deepBlue font-bold mb-6 lg:mb-10 lg:text-5xl text-deepCyan">Projects</h1>
+      <div className="flex flex-row flex-wrap gap-6 justify-evenly items-center">
         {projectList.map((project, index) => (
-          <div key={index} className="border border-white md:w-5/12 rounded-lg">
+          <div key={index} className="border-2 border-deepCyan md:w-5/12 rounded-lg">
             <img
               src={project.image}
               alt={project.name}
-              className="rounded-t-lg"
+              className="rounded-t-md"
             />
             <div className="p-5">
-              <div className="flex border-b border-b-white mb-2 items-center justify-between">
+              <div className="flex border-b border-b-deepCyan mb-2 items-center justify-between">
                 <h2 className="text-xl font-bold mb-2 lg:text-2xl ">
                   {project.name}
                 </h2>
@@ -36,7 +37,7 @@ const Projects = () => {
                   {project.techsUsed.techNames.map((tech, idx) => (
                     <div
                       key={idx}
-                      className="flex items-center border border-white p-2 rounded-lg text-sm"
+                      className="flex items-center border border-deepCyan p-2 rounded-lg text-sm"
                     >
                       <div className="mr-1">
                         {project.techsUsed.techIcons[idx]}
@@ -46,7 +47,7 @@ const Projects = () => {
                   ))}
                 </div>
                 <a
-                  className="cursor-pointer flex gap-2 border border-white p-2 rounded-lg text-sm items-center bg-white text-black"
+                  className="cursor-pointer flex gap-2 border border-deepCyan p-2 rounded-lg text-sm items-center bg-deepCyan text-black"
                   href={project.github.link}
                   target="_blank"
                   rel="noopener noreferrer"

@@ -7,10 +7,9 @@ import Skills from "./components/Skills";
 
 function App() {
   return (
-    <div className="bg-black min-h-screen">
+    <div className="bg-lightMint">
       <Navbar />
       <Hero />
-      <About />
       <Skills />
       <Projects />
       <Contact />

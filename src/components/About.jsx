@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <section className="text-white max-w-7xl mx-auto px-4 text-center">
+    <section className="text-white max-w-7xl mx-auto px-4 text-center -mt-16 md:-mt-0 min-h-[100dvh]">
       <p className="text-xs md:text-lg text-center mb-4 sm:text-sm">
         Hi, I’m <b>Michael Angelo Soreta</b>, a <b>Cum Laude</b> graduate with a{" "}
         <b>Bachelor's in Computer Science</b> from the{" "}

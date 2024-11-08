@@ -1,10 +1,11 @@
-import { FaJs, FaReact, FaHtml5, FaCss3,} from "react-icons/fa";
+import { FaJs, FaReact, FaHtml5, FaCss3 } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { FaFigma, FaGitAlt } from "react-icons/fa";
 import { RiNotionFill } from "react-icons/ri";
 import { SiJira } from "react-icons/si";
+import { IoLogoFirebase } from "react-icons/io5";
 
-export const frontEnd = [
+export const techStack = [
   {
     tech: "HTML5",
     icons: <FaHtml5 color="#E34F26" size={50} />,
@@ -25,23 +26,12 @@ export const frontEnd = [
     tech: "Tailwind",
     icons: <RiTailwindCssFill color="#38B2AC" size={50} />,
   },
-];
-
-export const otherTechStack = [
+  {
+    tech: "Firebase",
+    icons: <IoLogoFirebase color="#FFCB2B" size={50} />,
+  },
   {
     tech: "Git",
     icons: <FaGitAlt color="#F05032" size={50} />,
-  },
-  {
-    tech: "Figma",
-    icons: <FaFigma color="#F24E1E" size={50} />,
-  },
-  {
-    tech: "Notion",
-    icons: <RiNotionFill color="#ffffff" size={50} />,
-  },
-  {
-    tech: "Jira",
-    icons: <SiJira color="#0052CC" size={50} />, 
   },
 ];

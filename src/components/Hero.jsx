@@ -1,12 +1,22 @@
 const Hero = () => {
+  const scrollTo = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
-    <section className="text-white max-w-7xl mx-auto px-4 mt-14 lg:mt-24 flex flex-col items-center justify-around">
-      <div className="flex flex-col items-center text-center">
+    <section
+      className=" max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center pt-32 justify-center h-100dvh md:h-[100dvh] md:mt-0 text-darkSlateGreen pb-20 md:pb-0"
+      id="home-section"
+    >
+      <div className="flex flex-col items-center md:flex-col enter text-center">
         <h1 className="text-3xl font-bold mb-2 lg:text-5xl">
           Hi, I am Michael Angelo
         </h1>
-        <div className="w-max">
-          <h1 className="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-5 text-3xl text-white font-bold lg:text-5xl mb-4">
+        <div className="w-max text-center">
+          <h1 className="animate-typing overflow-hidden whitespace-nowrap border-r-4 text-deepCyan border-r-white pr-5 text-3xl font-bold lg:text-5xl mb-4">
             Front-End Developer
           </h1>
         </div>
@@ -15,20 +25,26 @@ const Hero = () => {
           transitioning to a full stack developer.
         </p>
         <div>
-          <button className="border border-white p-2 rounded-lg transition-colors mr-4  hover:bg-slate-900">
+          <button
+            className="border-2 border-deepCyan px-3 py-2 rounded-3xl  mr-4 hover:bg-teal-200"
+            onClick={() => scrollTo("contact-section")}
+          >
             Contact Me
           </button>
-          <button className="border border-white bg-white text-black p-2 rounded-lg transition-colors hover:bg-slate-400">
+          <button
+            className="border-2 border-deepCyan bg-deepCyan px-3 py-2 rounded-3xl text-lightMint hover:bg-cyan-800 transition-all duration-300"
+            onClick={() => window.open("/Michael_Soreta_Resume.pdf", "_blank")}
+          >
             Resume
           </button>
         </div>
       </div>
 
-      <div className="w-8/12 mt-6 md:mt-0">
+      <div className="flex w-2/3 mt-6 bg-transparent justify-center items-center">
         <img
-          src="/src/assets/vector.png"
-          alt="Hero illustration representing a developer"
-          className="w-auto"
+          src="/favicon.jpg"
+          alt="My Profile Picture"
+          className="w-6/12"
         />
       </div>
     </section>
